@@ -1,0 +1,11 @@
+.idea
+__pycache__
+.vscode
+*.log
+*.ipynb
+.ipynb_checkpoints
+demo.py
+*.http
+venv
+.env
+*.sqlite3
