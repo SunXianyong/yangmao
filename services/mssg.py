@@ -5,9 +5,9 @@ router = APIRouter()
 
 
 class WeiXinData(BaseModel):
-    data: str
+    pass
 
 
 @router.post("/weixin")
 async def mssg(itme: WeiXinData):
-    print(itme.data)
+    print(itme)
