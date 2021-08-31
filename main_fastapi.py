@@ -24,7 +24,7 @@ async def main(signature, timestamp, nonce, echostr):
     except InvalidSignatureException:
         print("微信验证失败")
         return "微信验证失败"
-    return echostr
+    return int(echostr)
 
 
 app.include_router(button.router, prefix='/button', default_response_class=JSONResponse)
