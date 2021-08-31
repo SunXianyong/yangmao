@@ -31,4 +31,4 @@ app.include_router(mssg.router, prefix='/wexin', default_response_class=JSONResp
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=9527)
+    uvicorn.run(app, host="0.0.0.0", port=80)
