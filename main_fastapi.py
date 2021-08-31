@@ -27,7 +27,7 @@ async def main(signature, timestamp, nonce, echostr):
     return int(echostr)
 
 
-app.include_router(mssg.router, default_response_class=JSONResponse)
+app.include_router(mssg.router)
 
 if __name__ == "__main__":
     import uvicorn
