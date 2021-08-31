@@ -9,3 +9,4 @@ demo.py
 venv
 .env
 *.sqlite3
+wechat_setting.py
