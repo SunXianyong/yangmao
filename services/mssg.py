@@ -11,10 +11,11 @@ router = APIRouter()
 @router.post("/weixin")
 async def mssg(request: Request):
     msg = parse_message(await request.body())
+    print(msg)
 
     reply = TextReply(message=msg)
     reply.content = '测试'
+
     # 转换成 XML
     xml = reply.render()
-
     return HTMLResponse(xml)
