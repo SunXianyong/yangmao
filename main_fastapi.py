@@ -20,7 +20,7 @@ class Item(BaseModel):
 @app.get("/weixin")
 async def main(signature, timestamp, nonce, echostr):
     try:
-        check_signature('sxy122333', signature, timestamp, nonce)
+        check_signature('sxy122333', str(signature), str(timestamp), str(nonce))
         print(signature, timestamp, nonce, echostr)
     except InvalidSignatureException:
         return {"微信验证失败"}
