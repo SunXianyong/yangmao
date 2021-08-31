@@ -27,8 +27,7 @@ async def main(signature, timestamp, nonce, echostr):
     return int(echostr)
 
 
-app.include_router(button.router, prefix='/button', default_response_class=JSONResponse)
-app.include_router(mssg.router, prefix='/wexin', default_response_class=JSONResponse)
+app.include_router(mssg.router, default_response_class=JSONResponse)
 
 if __name__ == "__main__":
     import uvicorn
