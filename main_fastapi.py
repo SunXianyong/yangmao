@@ -27,7 +27,7 @@ async def main(signature, timestamp, nonce, echostr):
     return int(echostr)
 
 
-app.include_router(mssg.router)
+app.include_router(mssg.router, default_response_class='application/xml')
 
 if __name__ == "__main__":
     import uvicorn

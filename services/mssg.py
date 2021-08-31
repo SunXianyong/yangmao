@@ -1,13 +1,12 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
+from starlette.requests import Request
+from starlette.responses import HTMLResponse, Response
 
 router = APIRouter()
 
 
-class WeiXinData(BaseModel):
-    pass
-
-
 @router.post("/weixin")
-async def mssg(**kwargs):
-    print(kwargs)
+async def mssg(request: Request):
+    print(await request.body())
+    return HTMLResponse('success')
