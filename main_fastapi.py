@@ -21,6 +21,7 @@ class Item(BaseModel):
 async def main(signature, timestamp, nonce, echostr):
     try:
         check_signature('sxy122333', signature, timestamp, nonce)
+        print(signature, timestamp, nonce, echostr)
     except InvalidSignatureException:
         return {"微信验证失败"}
     return echostr
@@ -31,4 +32,5 @@ app.include_router(mssg.router, prefix='/wexin', default_response_class=JSONResp
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=80)
