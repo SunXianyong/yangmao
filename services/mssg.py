@@ -9,5 +9,5 @@ class WeiXinData(BaseModel):
 
 
 @router.post("/weixin")
-async def mssg(itme):
-    print(itme)
+async def mssg(**kwargs):
+    print(kwargs)
