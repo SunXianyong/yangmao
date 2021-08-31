@@ -41,8 +41,10 @@ async def mssg(request: Request):
     print(msg)
 
     reply = NewTextReply(message=msg)
-    reply.content = '🧧&lt;a href=&quot;weixin://bizmsgmenu?msgmenucontent=美团红包&amp;msgmenuid=0&quot;&gt;美团红包&lt;/a&gt;\n' \
-                    '🧧&lt;a href=&quot;weixin://bizmsgmenu?msgmenucontent=饿了吗红包&amp;msgmenuid=0&quot;&gt;饿了吗红包&lt;/a&gt;'
+    reply.content = '🧧&lt;a href=&quot;http://dpurl.cn/7DnghG2z&quot;&gt;美团-每日红包&lt;/a&gt;\n' \
+                    '🧧&lt;a href=&quot;http://dpurl.cn/7DnghG2z&quot;&gt;撑了吗-每日红包（未上线）&lt;/a&gt;'
+    # reply.content = '🧧&lt;a href=&quot;weixin://bizmsgmenu?msgmenucontent=美团红包&amp;msgmenuid=0&quot;&gt;美团红包&lt;/a&gt;\n' \
+    #                 '🧧&lt;a href=&quot;weixin://bizmsgmenu?msgmenucontent=饿了吗红包&amp;msgmenuid=0&quot;&gt;饿了吗红包&lt;/a&gt;'
 
     # 转换成 XML
     xml = reply.render()
