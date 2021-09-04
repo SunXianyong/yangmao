@@ -42,10 +42,10 @@ async def mssg(request: Request):
     print(msg)
 
     if msg.content == 'test':
-        return test(msg)
+        return await test(msg)
 
     reply = NewTextReply(message=msg)
-    reply.content = 'Hi，你的每天红包已供上，请先收下！\n' \
+    reply.content = 'Hi，每天红包已供上，请先收下！\n' \
                     '🧧&lt;a href=&quot;http://dpurl.cn/7DnghG2z&quot;&gt;美团外卖-每日红包&lt;/a&gt;\n' \
                     '🧧&lt;a href=&quot;http://y6.pub/uH8CWP&quot;&gt;美团生鲜超市-每日红包&lt;/a&gt;'
     # '--&lt;a href=&quot;weixin://bizmsgmenu?msgmenucontent=帮助&amp;msgmenuid=0&quot;&gt;【有什么不懂可以点我】&lt;/a&gt;--'
