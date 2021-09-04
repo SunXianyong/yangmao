@@ -38,10 +38,10 @@ class NewTextReply(TextReply):
 
 @router.post("/weixin")
 async def mssg(request: Request):
-    msg = parse_message(await request.body())
+    msg: TextMessage = parse_message(await request.body())
     print(msg)
 
-    if msg.get('Content') == 'test':
+    if msg.content == 'test':
         return test(msg)
 
     reply = NewTextReply(message=msg)
