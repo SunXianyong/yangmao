@@ -1,10 +1,8 @@
 from fastapi import FastAPI, APIRouter
 from pydantic import BaseModel
 from typing import Optional
-from starlette.responses import JSONResponse
 from wechatpy.utils import check_signature
 from wechatpy.exceptions import InvalidSignatureException
-
 from services import button, mssg
 
 app = FastAPI()
