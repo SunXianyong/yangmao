@@ -1,16 +1,16 @@
 from werobot import WeRoBot
 from wecaht_setting import APP_ID, APP_SECRET
 
-robot = WeRoBot(token='yangmao')
-
-robot.config["APP_ID"] = APP_ID
-robot.config["APP_SECRET"] = APP_SECRET
-
-# 让服务器监听
-robot.config['HOST'] = '0.0.0.0'
-robot.config['PORT'] = 80
-
-
+# robot = WeRoBot(token='yangmao')
+#
+# robot.config["APP_ID"] = APP_ID
+# robot.config["APP_SECRET"] = APP_SECRET
+#
+# # 让服务器监听
+# robot.config['HOST'] = '0.0.0.0'
+# robot.config['PORT'] = 80
+#
+#
 
 # 初始按钮
 # client = robot.client
