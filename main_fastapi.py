@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import Optional
 from wechatpy.utils import check_signature
 from wechatpy.exceptions import InvalidSignatureException
-from services import button, mssg
+from services import mssg
 
 app = FastAPI()
 router = APIRouter()
@@ -15,10 +15,10 @@ class Item(BaseModel):
     is_offer: Optional[bool] = None
 
 
-@app.get("/weixin")
+@app.get("/")
 async def main(signature, timestamp, nonce, echostr):
     try:
-        check_signature('sxy122333', str(signature), str(timestamp), str(nonce))
+        check_signature('tokenhere', str(signature), str(timestamp), str(nonce))
     except InvalidSignatureException:
         print("微信验证失败")
         return "微信验证失败"
@@ -30,4 +30,4 @@ app.include_router(mssg.router, default_response_class='application/xml')
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=80)
+    uvicorn.run(app, host="0.0.0.0", port=8888)
